@@ -44,7 +44,15 @@ def rectangle(start, end):
 
 def triangle(start, end):
     "Draw triangle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    
+    for i in range (3):
+        forward(end.x - start.x)
+        left (120)
+        forward(end.x - start.x)
 
 def tap(x, y):
     "Store starting point or draw shape."
@@ -66,10 +74,9 @@ state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
-onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('#D1F2EB'), 'Q')
-onkey(lambda: color('white'), 'W')
+onkey(lambda: color('#FFE900'), 'A')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
