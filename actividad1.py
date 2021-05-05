@@ -53,6 +53,7 @@ def triangle(start, end):
         forward(end.x - start.x)
         left (120)
         forward(end.x - start.x)
+    end_fill()
 
 def tap(x, y):
     "Store starting point or draw shape."
